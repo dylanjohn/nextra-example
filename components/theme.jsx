@@ -11,45 +11,25 @@ function Layout({ pageOpts, children }) {
   // console.log(pageOpts.pageMap)
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>{pageOpts.title}</title>
       </Head>
-      <div>
-        <navbar className={styles.navbar}>
+      <div className="flex flex-col prose flex-grow container px-5 mx-auto mb-6 w-full">
+        <navbar>
           <h2>This is the navbar</h2>
-          {
-            // You can also set a NEXT_LOCALE cookie to make it the default redirection target:
-            // document.cookie = `NEXT_LOCALE=de; path=/`
-          }
-          <Link href={'/'} locale='en'>
-            EN
-          </Link>
-          {' | '}
-          <Link href={'/'} locale='de'>
-            DE
-          </Link>
         </navbar>
-        <main className={styles.main}>
-          <aside className={styles.sidebar}>
-            <h3>Navigation</h3>
-            <div>
-              <Link href='/'>Home</Link>
-            </div>
-            <div>
-              <Link href='/docs/v19/globals'>Globals</Link>
-            </div>
-          </aside>
+        <main className="flex-grow">
           <article>
             <MDXProvider
               components={{
                 // You can add custom components here for MDX
-                h1: (props) => <h1 className={styles.h1} {...props} />,
+                h1: (props) => <h1 {...props} />,
                 pre: ({ filename, ...props }) => {
                   return (
-                    <div className={styles.codeblock}>
+                    <div>
                       {filename ? (
-                        <div className={styles.filename}>{filename}</div>
+                        <div>{filename}</div>
                       ) : null}
                       <pre {...props} />
                     </div>
@@ -63,7 +43,7 @@ function Layout({ pageOpts, children }) {
         </main>
         <footer>This is the footer</footer>
       </div>
-    </>
+    </div>
   )
 }
 

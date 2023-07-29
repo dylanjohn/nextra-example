@@ -12,8 +12,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   trailingSlash: true,
-  // assetPrefix: isProd ? '/dylanjohn-dev' : "",
-  // basePath: '/dylanjohn-dev',
+  assetPrefix: isProd ? '/dylanjohn-dev' : "",
+  basePath: '/dylanjohn-dev',
 }
 
 module.exports = withNextra(nextConfig)
