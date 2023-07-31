@@ -22,8 +22,42 @@ module.exports = {
       mono: [...fontFamily.mono],
     },
     extend: {
-      colors: {},
-      typography: (theme) => ({}),
+      colors: {
+        gray: {
+          500: '#4a5568',
+        },
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            code: {
+              backgroundColor: theme('colors.gray.200'),
+              paddingLeft: '6px',
+              paddingRight: '6px',
+              paddingTop: '2px',
+              paddingBottom: '2px',
+              borderRadius: '0.25rem',
+              '&::before': {
+                content: `"" !important`,
+              },
+              '&::after': {
+                content: `"" !important`,
+              },
+              fontWeight: 'normal',
+            },
+            pre: {
+              // opacity: 0.98,
+              background: theme('colors.white'),
+              borderColor: theme('colors.gray.200'),
+              border: '1px solid',
+            },
+            h1: {
+              letterSpacing: '-.015em',
+            },
+            // end css
+          },
+        },
+      }),
     },
   },
   plugins: [

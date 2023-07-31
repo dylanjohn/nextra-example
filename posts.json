@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "slug": "/posts/aaron-swartz-a-programmable-web",
+      "date": "2 Dec, 2020",
+      "title": "Notes on A Programmable Web by Aaron Swartz",
+      "description": "At the time when I was getting into web development, I had the chance to read one of the most inspiring book about the web, Aaron Swartz's A Programmable Web.",
+      "tag": "web development",
+      "author": "Shu"
+    },
+    {
+      "slug": "/posts/code-blocks",
+      "date": "10 June, 2020",
+      "title": "Code blocks",
+      "description": "Some unpolished quick notes on when and how we should design and use UI animations in a web application.",
+      "tag": "web development",
+      "author": "Shu"
+    }
+  ]
+}

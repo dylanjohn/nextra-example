@@ -3,25 +3,17 @@ title: Hello
 trademark: Trademark
 ---
 
-# Hello
+# Hi, Im Dylan
 
-I am going to the movies today.
+Started programming in high school and has since spent 4 years on **algorithm competitions**, Shu worked as a graphic designer and web developer in Shanghai, and got his BSc degree in Computer Science from Fudan University. He also enjoys creating game and HCI prototypes as side projects.
 
-{/* Check out https://nextra.site/docs/guide/syntax-highlighting */}
+Get in touch via Twitter DM or email g@shud.in.
 
-```javascript filename="index.js" {1,4-5}
-const http = require('http');
+***
 
-const hostname = '127.0.0.1';
-const port = 3000;
+### Recent case study
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+![Image](../public/img.jpeg)
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-```
+[Out of Bounds Exception](https://duckduckgo.com), a puzzle game prototype. 2018
+

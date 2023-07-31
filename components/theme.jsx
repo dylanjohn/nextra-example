@@ -2,24 +2,41 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import { MDXProvider } from '@mdx-js/react'
+import Nav from "./nav";
 
 function Layout({ pageOpts, children }) {
+  const { route } = useRouter()
   // Front matter of the current page:
   // pageOpts.frontMatter
 
   // You can build the sidebar based on the structure data from `pageMap`:
-  // console.log(pageOpts.pageMap)
+  // console.log(pageOpts)
 
+  if (route === '/posts') {
+    console.log(pageOpts)
+
+    return (
+      <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col prose flex-grow container mx-auto mb-6 w-full">
+          <Nav />
+          <main className="flex-grow">
+            <article>
+             Boom
+            </article>
+          </main>
+        </div>
+      </div>
+    )
+  }
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
         <title>{pageOpts.title}</title>
       </Head>
-      <div className="flex flex-col prose flex-grow container px-5 mx-auto mb-6 w-full">
-        <navbar>
-          <h2>This is the navbar</h2>
-        </navbar>
+      <div className="flex flex-col prose flex-grow container mx-auto mb-6 w-full"> 
         <main className="flex-grow">
+          <Nav />
           <article>
             <MDXProvider
               components={{
@@ -59,4 +76,5 @@ export default function Theme(props) {
       <Content {...props} />
     </Layout>
   )
+
 }
