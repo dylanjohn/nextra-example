@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Notes on A Programmable Web by Aaron Swartz</title><meta name="next-head-count" content="3"/><link rel="preload" href="/dylanjohn-dev/_next/static/css/74251517c5b549eb.css" as="style"/><link rel="stylesheet" href="/dylanjohn-dev/_next/static/css/74251517c5b549eb.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/dylanjohn-dev/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/dylanjohn-dev/_next/static/chunks/webpack-93d9dbc16a832349.js" defer=""></script><script src="/dylanjohn-dev/_next/static/chunks/framework-ac88a2a245aea9ab.js" defer=""></script><script src="/dylanjohn-dev/_next/static/chunks/main-7c01f67dfa2a3e7d.js" defer=""></script><script src="/dylanjohn-dev/_next/static/chunks/pages/_app-d12f46d96edd0d32.js" defer=""></script><script src="/dylanjohn-dev/_next/static/chunks/210-848afcef26bb6cf7.js" defer=""></script><script src="/dylanjohn-dev/_next/static/chunks/pages/posts/aaron-swartz-a-programmable-web-cd7f150ea694312d.js" defer=""></script><script src="/dylanjohn-dev/_next/static/RroR6VgwWPfrWHUVMLNCp/_buildManifest.js" defer=""></script><script src="/dylanjohn-dev/_next/static/RroR6VgwWPfrWHUVMLNCp/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="flex flex-col min-h-screen"><div class="flex flex-col prose prose-slate flex-grow container mx-auto mb-6 w-full"><main class="flex-grow"><h1>Notes on A Programmable Web by Aaron Swartz</h1><div class="navbar mb-8 flex justify-between items-center"><div class="ml-auto"><button class="inline-block px-2 transition-colors font-normal text-gray-500 hover:text-gray-900 no-underline">Back</button></div></div><article><p>At the time when I was getting into web development, I had the chance to read
+one of the most inspiring book about the web, Aaron Swartz&#x27;s A Programmable Web.
+And it completely changed my mind.</p>
+<p><strong>Updated in
+2017</strong>: <a href="https://github.com/tommyjtl">@tommyjtl</a>, <a href="https://github.com/zimine">@zimine</a> and
+I are currently helping translate this post into Simplified Chinese.
+Any <a href="https://github.com/tommyjtl/the-programmable-web/tree/translation">contributions</a> are
+welcomed :)</p>
+<hr/>
+<blockquote>
+<p>Sure, it sounds a little bit crazy. But it paid off the last time they made
+that gamble: we ended up with a little thing called the World Wide Web. Let&#x27;s
+see if they can do it again.</p>
+</blockquote>
+<p>— Aaron</p>
+<p>Read Aaron&#x27;s original post:
+<a href="http://www.cs.rpi.edu/~hendler/ProgrammableWebSwartz2009.html">Building Programmable Web Sites by Aaron Swartz, 2009</a>.</p>
+<h2 id="quotes-about-www">Quotes About WWW</h2>
+<ol>
+<li>“(the Internet) It should be kept open. It should be kept free.” – Steve Jobs</li>
+<li>“The third reason it’s very exciting is that Microsoft doesn’t own it and I
+don’t think they can. It’s the one thing in the industry that Microsoft can
+probably never own. I think one of the things that’s essential is that the
+government continue to fund the Internet as a public trust, as a public
+facility and remove any of these ridiculous notions of privatizing it that
+have been brought up. I don’t think they’re going to fly, thankfully.” –
+Steve Jobs</li>
+<li>Jacques Mattheij wrote an article, about the web in 2050, which feels like
+the <em>New Speak</em> in George Orwell&#x27;s <em>1984</em>.</li>
+</ol>
+<h2 id="quotes-from-aarons-post">Quotes from Aaron’s Post</h2>
+<p>About API</p>
+<blockquote>
+<p>APIs only let you look at the data in a <strong>particular way</strong>, typically the way
+that the hosting site looks at it</p>
+</blockquote>
+<p>About API, II (Q: differences between data, protocol, API?)</p>
+<blockquote>
+<p>pass the noun to the verb: /share?v=1234 pass the verb to the noun:
+/v/1234?m=share</p>
+</blockquote>
+<p>Then he describes the interesting hybrid that the Web adopted, which he terms
+&quot;Representational State Transfer&quot; or REST.</p>
+<p>About “standard” vs “design”</p>
+<blockquote>
+<p>And instead of spending time building things, they&#x27;ve convinced people
+interested in these ideas that the first thing we need to do is write
+standards. (<strong>To engineers, this is absurd from the start -- standards are
+things you write after you&#x27;ve got something working, not before!</strong>)</p>
+</blockquote>
+<p>Fortunately for us, the Web was designed with this future in mind. The protocols
+that underpin it are not designed simply to provide pages for human consumption,
+but also to easily accommodate the menagerie of spiders, bots, and scripts that
+explore its fertile soil. ...for applications.</p>
+<p>Then we&#x27;ll look into what it means for your application to be not just another
+tool for people and software to use, but <strong>part of the ecology</strong> -- a section of
+the programmable web. This means exposing your data to be queried and copied and
+integrated, even without explicit permission, into the larger software
+ecosystem, while protecting users&#x27; freedom.</p>
+<p>The more likely option is, of course, to break away from the Web altogether, and
+force people to download special software to use your application. ... If that&#x27;s
+a choice you want to make, you probably shouldn&#x27;t be reading this book.</p>
+<p>This is one of the secrets of success on the Web: the more you send people away,
+the more they come back</p>
+<p>About URL and URI</p>
+<blockquote>
+<p>Moreover, URLs do not just exist as isolated entities</p>
+</blockquote>
+<p>URLs shouldn&#x27;t change (and if they do change, the old ones should redirect to
+the new ones) so they should only contain information about the page that never
+changes. This leads to some obvious requirements.</p>
+<p>First, URLs shouldn&#x27;t include technical details of the software you used to
+build your website, since that could change at any moment</p>
+<p>About TBL</p>
+<blockquote>
+<p>And even then, they&#x27;re far more limited than the wide-reaching interactivity
+that Berners-Lee imagined.</p>
+</blockquote>
+<p>Instead, they used the clone created by a team at the University of Illinois
+Urbana-Champaign (UIUC), which never supported editing because programmer Marc
+Andreesen was too dumb to figure out how to do page editing with inline
+pictures, something Tim Berners-Lee&#x27;s version had no problem with.</p>
+<p>(related: <a href="http://www.aaronsw.com/weblog/mylifewithtim">http://www.aaronsw.com/weblog/mylifewithtim</a>)</p>
+<h2 id="external-links">External links</h2>
+<ol>
+<li><a href="http://www.computerworld.com/article/2498543/it-management/steve-jobs-interview--one-on-one-in-1995.html?page=8">Steve Jobs interview: One-on-one in 1995</a></li>
+<li><a href="https://solid.mit.edu/">Solid: Re-decentralizing the web</a></li>
+<li><a href="https://pinboard.in/u:aaronsw/t:web">Aaron’s public links &amp; notes tagged with “web” on Pinboard</a></li>
+<li><a href="https://www.zhihu.com/question/54777923/answer/141058259">“URLs shouldn&#x27;t include technical details”: 天猫首页</a></li>
+<li><a href="https://www.w3.org/standards/semanticweb">Semantic Web – W3C</a></li>
+<li><a href="https://www.ted.com/talks/tim_berners_lee_on_the_next_web">Tim Berners-Lee: The next web</a></li>
+<li><a href="https://jacquesmattheij.com/the-web-in-2050">The Web in 2050 · Jacques Mattheij</a>:
+“reboot the web”</li>
+</ol></article></main><footer>This is the footer</footer></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/posts/aaron-swartz-a-programmable-web","query":{},"buildId":"RroR6VgwWPfrWHUVMLNCp","assetPrefix":"/dylanjohn-dev","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
