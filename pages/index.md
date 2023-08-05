@@ -1,19 +1,13 @@
 ---
-title: Hello
+title: Hello World
 trademark: Trademark
 ---
 
-# Hi, Im Dylan
+Nextra is a **Next.js** based static site generator. 0 lines of code needed.
 
-Started programming in high school and has since spent 4 years on **algorithm competitions**, Shu worked as a graphic designer and web developer in Shanghai, and got his BSc degree in Computer Science from Fudan University. He also enjoys creating game and HCI prototypes as side projects.
+It supports Markdown with React components (MDX), automatically generated  **algorithm competitions** sidebar and anchor links, file-system based routing, built-in syntax highlighting, i18n and more.
 
-Get in touch via Twitter DM or email g@shud.in.
+Get in touch via Twitter DM or email hi@dylanjohn.dev.
 
 ***
-
-### Recent case study
-
-![Image](../public/img.jpeg)
-
-[Out of Bounds Exception](https://duckduckgo.com), a puzzle game prototype. 2018
 

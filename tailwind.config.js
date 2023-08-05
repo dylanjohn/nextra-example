@@ -1,4 +1,5 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 const round = (num) =>
   num
@@ -21,15 +22,20 @@ module.exports = {
       // sans: [ 'IBM Plex Sans', ...fontFamily.sans],
       mono: [...fontFamily.mono],
     },
-    extend: {
-      colors: {
-        gray: {
-          500: '#4a5568',
-        },
+    colors: {
+      'gray': {
+        500: '#4a5568',
       },
+      violet: colors.violet,
+      gray: colors.gray,
+      // ...
+    },
+    extend: {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: '75ch', // add required value here
+            color: theme('colors.gray.500'),
             code: {
               backgroundColor: theme('colors.gray.200'),
               paddingLeft: '6px',
@@ -52,6 +58,7 @@ module.exports = {
               border: '1px solid',
             },
             h1: {
+              // fontWeight:'700',
               letterSpacing: '-.015em',
             },
             // end css
