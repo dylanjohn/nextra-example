@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { MDXProvider } from '@mdx-js/react';
 import Nav from './nav';
+import ThemeSwitch from './themeSwitch';
 
 function Layout({ pageOpts, children }) {
   const { route } = useRouter();
@@ -61,8 +62,9 @@ function Layout({ pageOpts, children }) {
     <div className="flex flex-col min-h-screen">
       <Head>
         <title>{pageOpts.title}</title>
+        <link rel="icon" href="./favicon.png" />
       </Head>
-      <div className="flex flex-col prose prose-slate flex-grow container mx-auto mb-6 w-full"> 
+      <div className="flex flex-col prose prose-slate dark:prose-invert flex-grow container mx-auto mb-6 w-full"> 
         <main className="flex-grow">
           <h1>{pageOpts.title}</h1>
           <Nav />
@@ -87,6 +89,7 @@ function Layout({ pageOpts, children }) {
           </article>
         </main>
         <footer>This is the footer</footer>
+        <ThemeSwitch />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ export default function Header(props) {
 			{isPost ? (
 				<button
           onClick={goBack}
-          className="inline-block px-2 transition-colors font-normal text-gray-500 hover:text-gray-900 no-underline"
+          className="inline-block px-2 transition-colors font-normal text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 no-underline"
         >
           Back
         </button>
@@ -47,11 +47,11 @@ export default function Header(props) {
 					  "inline-block px-2 transition-colors font-normal",
 					  item.href === "/"
 						? router.pathname === item.href
-						  ? "text-gray-900 hover:text-gray-900"
-						  : "text-gray-500 hover:text-gray-900 no-underline"
+						  ? "text-gray-900 hover:text-gray-900 dark:text-gray-100 dark:hover:text-gray-100"
+						  : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 no-underline"
 						: router.asPath.startsWith(item.href)
-						? "text-gray-900 hover:text-gray-900"
-						: "text-gray-500 hover:text-gray-900 no-underline"
+						? "text-gray-900 hover:text-gray-900 dark:text-gray-100 dark:hover:text-gray-100"
+						: "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 no-underline"
 					)}
 					aria-current={router.pathname === item.href ? "page" : undefined}
 				  >

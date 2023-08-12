@@ -1,7 +1,13 @@
-// https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet
+import { ThemeProvider } from 'next-themes'
 
 import '../styles/global.css'
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider attribute="class" themes={['light', 'dark']}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
+
+export default MyApp
