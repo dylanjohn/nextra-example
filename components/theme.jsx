@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { MDXProvider } from '@mdx-js/react';
 import Nav from './nav';
+import Footer from './footer';
 import ThemeSwitch from './themeSwitch';
+
 
 function Layout({ pageOpts, children }) {
   const { route } = useRouter();
@@ -29,15 +31,22 @@ function Layout({ pageOpts, children }) {
     const postsMdxPages = extractMdxPages(postsFolder.children);
 
     // Get the latest post (assuming postsMdxPages is already sorted by date)
-    const latestPost = postsMdxPages[0];
+    // const latestPost = postsMdxPages[0];
+    const latestPosts = postsMdxPages.filter(post => post.name !== 'index').slice(0, 3); // Change the number to the desired count
 
     LatestPost = (
       <div>
-        <h2>Latest Post:</h2>
-        <Link href={latestPost.route}>
-          {latestPost.frontMatter.title}
-        </Link>
-      </div>
+      <h2>Latest Posts:</h2>
+      <ul>
+        {latestPosts.map(post => (
+          <li key={post.route}>
+            <Link href={post.route}>
+              {post.frontMatter.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
     );
 
     // Exclude the 'index' page from the list of posts
@@ -59,7 +68,7 @@ function Layout({ pageOpts, children }) {
   const isPostPage = route === '/posts';
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen dark:border-white">
       <Head>
         <title>{pageOpts.title}</title>
         <link rel="icon" href="./favicon.png" />
@@ -88,8 +97,7 @@ function Layout({ pageOpts, children }) {
             {isPostPage && Posts}
           </article>
         </main>
-        <footer>This is the footer</footer>
-        <ThemeSwitch />
+      <Footer />
       </div>
     </div>
   );

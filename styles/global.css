@@ -8,6 +8,8 @@ body {
   margin: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .post-item .post-item-title {
